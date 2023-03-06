@@ -45,20 +45,23 @@
 	</style>
 </head>
 <body>
-	<h1>Chúc mừng sinh nhật!</h1>
+	<h1>Chúc mừng sinh nhật Thu Hà!</h1>
 	
-	<p>Hôm nay là ngày 08/03, chúc Hà sinh nhật vui vẻ, luôn luôn vui tươi nhá!!!</p>
+	<p>Chúc mừng sinh nhật Thu Hà! Tôi hy vọng bạn có một ngày sinh nhật thật tuyệt vời và đầy ý nghĩa.</p>
 	
-	<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn" target="_blank">Mở quà</a>
-	
-		<audio autoplay loop>
-		<source src="https://raw.githubusercontent.com/truong0235/web-test/main/happybirthday.mp3" type="audio/mpeg">
+	<audio autoplay loop>
+		<source src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3" type="audio/mpeg">
 		Your browser does not support the audio element.
 	</audio>
 	
-	
 	<script>
-	
-
+		// Lấy đối tượng audio
+		var x = document.getElementsByTagName("audio")[0]; 
+		
+		// Hàm tắt nhạc
+		function pauseAudio() { 
+			x.pause(); 
+		} 
+	</script>
 </body>
 </html>
