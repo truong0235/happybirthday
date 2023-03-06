@@ -1,10 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Chúc mừng sinh nhật!</title>
+	<title>Chúc mừng sinh nhật</title>
+	<style>
+		body {
+			background-color: #f7f7f7;
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		
+		h1 {
+			color: #ff2e63;
+			margin-top: 50px;
+		}
+		
+		p {
+			font-size: 18px;
+			line-height: 1.6;
+			margin: 20px auto;
+			max-width: 600px;
+		}
+		
+		.btn {
+			background-color: #ff2e63;
+			border: none;
+			color: #fff;
+			padding: 10px 20px;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin-top: 20px;
+			border-radius: 4px;
+		}
+		
+		.btn:hover {
+			background-color: #e60052;
+		}
+	</style>
 </head>
 <body>
 	<h1>Chúc mừng sinh nhật!</h1>
-	<p>Chúc mừng sinh nhật! Hãy trải qua một ngày đặc biệt và thật đáng nhớ.</p>
+	
+	<p>Ngày sinh nhật của {{tên}} là <span id="birthday"></span>. Chúc mừng sinh nhật {{tên}}! Tôi hy vọng bạn có một ngày sinh nhật thật tuyệt vời và đầy ý nghĩa.</p>
+	
+	<a href="#" class="btn">Mở quà</a>
+	
+	<script>
+		// Lấy ngày sinh nhật của tên bạn muốn chúc mừng
+		var birthday = new Date("mm/dd/yyyy");
+	
+		// Hiển thị ngày sinh nhật trong thẻ span
+		document.getElementById("birthday").innerHTML = birthday.toDateString();
+	</script>
 </body>
 </html>
