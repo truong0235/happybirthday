@@ -50,7 +50,23 @@
 	<p>Hôm nay là ngày 08/03, chúc Hà sinh nhật vui vẻ, luôn luôn vui tươi nhá!!!</p>
 	
 	<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn" target="_blank">Mở quà</a>
+	
+		<audio autoplay loop>
+		<source src="yourmusic.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+	
+	<button onclick="pauseAudio()" class="btn">Tắt nhạc</button>
+	
+	<script>
 
+		
+		// Lấy đối tượng audio
+		var x = document.getElementsByTagName("audio")[0]; 
+		
+		// Hàm tắt nhạc
+		function pauseAudio() { 
+			x.pause(); 
 	
 	<script>
 	
