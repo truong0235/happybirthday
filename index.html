@@ -1,68 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Chúc mừng sinh nhật</title>
+	<title>Happy Birthday John</title>
 	<style>
 		body {
-			background-color: #f7f7f7;
 			font-family: Arial, sans-serif;
+			font-size: 20px;
 			text-align: center;
+			margin: 0;
+			padding: 0;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 			height: 100vh;
 		}
-		
-		h1 {
-			color: #ff2e63;
-			margin-top: 50px;
-			font-size: 4rem;
-		}
-		
-		p {
-			font-size: 2rem;
-			line-height: 1.6;
-			margin: 20px auto;
-			max-width: 600px;
-		}
-		
-		.btn {
-			background-color: #ff2e63;
-			border: none;
-			color: #fff;
-			padding: 10px 20px;
-			text-decoration: none;
-			display: inline-block;
-			font-size: 2rem;
-			margin-top: 20px;
-			border-radius: 4px;
-		}
-		
-		.btn:hover {
-			background-color: #e60052;
-		}
+	h1 {
+		font-size: 60px;
+		margin-bottom: 50px;
+	}
 
-		.hide {
-			display: none;
-		}
-	</style>
+	button {
+		background-color: #4CAF50;
+		color: white;
+		font-size: 24px;
+		padding: 16px 32px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+</style>
 </head>
-<body class="hide">
-	<h1>Chúc mừng sinh nhật!</h1>
-	
-	<p>Hôm nay là 08/03, chúc Hà sinh nhật vui vẻ, học tập tốt nha!!!.</p>
-	<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn" target="_blank">Mở quà</a>
-	<a href="#" class="show-btn btn" onclick="showPage()">Hiển thị toàn bộ</a>
-	<audio autoplay loop>
-  		<source src="https://drive.google.com/u/0/uc?id=1q2uLT-lV29H3zHpnPLSVMUura1XSXB6L&export=download" type="audio/mp3">
+<body>
+	<audio id="myAudio" loop>
+		<source src="https://drive.google.com/u/0/uc?id=1q2uLT-lV29H3zHpnPLSVMUura1XSXB6L&export=download" type="audio/mpeg">
+		Your browser does not support the audio element.
 	</audio>
+<button onclick="start()">Bắt Đầu</button>
 
-	<script>
-		function showPage() {
-			document.body.classList.remove('hide');
-			document.querySelector('.show-btn').classList.add('hide');
-		}
-	</script>
+<div id="birthday" style="display: none;">
+	<h1>Chúc mừng sinh nhật!!!</h1>
+	<p>Chúc Hà qua một tuổi mới có nhiều niềm vui, luôn luôn xinh đẹp nhé </p>
+	<button onclick="openGift()">Nhận Quà</button>
+</div>
+
+<script>
+	function start() {
+		var audio = document.getElementById("myAudio");
+		audio.play();
+		document.getElementById("birthday").style.display = "block";
+		document.getElementsByTagName("button")[0].style.display = "none";
+	}
+
+	function openGift() {
+		window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+	}
+</script>
 </body>
-</html>
+</html> 
