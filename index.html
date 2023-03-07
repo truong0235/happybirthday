@@ -42,17 +42,27 @@
 		.btn:hover {
 			background-color: #e60052;
 		}
+
+		.hide {
+			display: none;
+		}
 	</style>
 </head>
-<body>
+<body class="hide">
 	<h1>Chúc mừng sinh nhật!</h1>
 	
 	<p>Hôm nay là 08/03, chúc Hà sinh nhật vui vẻ, học tập tốt nha!!!.</p>
 	<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn" target="_blank">Mở quà</a>
+	<a href="#" class="show-btn btn" onclick="showPage()">Hiển thị toàn bộ</a>
 	<audio autoplay loop>
-  	<source src="https://drive.google.com/u/0/uc?id=1q2uLT-lV29H3zHpnPLSVMUura1XSXB6L&export=download" type="audio/mp3">
+  		<source src="https://drive.google.com/u/0/uc?id=1q2uLT-lV29H3zHpnPLSVMUura1XSXB6L&export=download" type="audio/mp3">
 	</audio>
 
-
+	<script>
+		function showPage() {
+			document.body.classList.remove('hide');
+			document.querySelector('.show-btn').classList.add('hide');
+		}
+	</script>
 </body>
 </html>
